@@ -1,0 +1,60 @@
+* {margin: 0;
+padding: 0%;
+box-sizing: border-box;}
+
+@font-face {
+    font-family: italianno;
+    src: url(./fonts/Italianno-Regular.ttf);}
+    @font-face {
+    font-family: Phudo;
+    src: url(./fonts/static/Phudu-Bold.ttf);
+}
+@font-face {
+    font-family: courgette;
+    src: url(./fonts/Courgette-Regular.ttf);
+}
+ /* #acd9ed */
+.navbar-nav.me-auto.mb-2.mb-lg-0 {padding-left: 10rem; font-size: 1.4rem;}
+
+#nav-line {background-color: #132f3b; color: white; text-align: center;}
+#navbar {background-image: linear-gradient(rgb(146, 200, 205) , white); justify-content: space-around;}
+.navbar-brand {font-family: "italianno" !important; font-size: 3rem; color: purple; text-shadow: 
+    0 0 7px #fff, 
+    0 0 10px #fff, 
+    0 0 21px #fff, 
+    0 0 42px rgb(199, 34, 207) , 
+    0 0 82px rgb(199, 34, 207), 
+    0 0 92px rgb(199, 34, 207), 
+    0 0 102px  rgb(199, 34, 207),
+    0 0 151px rgb(199, 34, 207);}
+  a.hover {color: #fff;}
+.nav-link {color: purple; font-family: 'Times New Roman', Times, serif;}
+.nav-link.hover {color: white;}
+.nav-link.active.active {color: #203850; font-weight: 1000; text-decoration: underline; }
+.nav-link:focus {color: #356391;}
+.nav-link:hover { font-weight: 1000; color: purple; text-shadow: 
+    0 0 7px #fff, 
+    0 0 10px #fff, 
+    0 0 21px #fff, 
+    0 0 42px rgb(199, 34, 207) , 
+    0 0 82px rgb(199, 34, 207), 
+    0 0 92px rgb(199, 34, 207), 
+    0 0 102px  rgb(199, 34, 207),
+    0 0 151px rgb(199, 34, 207);}
+.dropdown-item:focus {background-color: rgb(146, 200, 205);}
+.dropdown-menu.show { padding: 0;}
+.dropdown-item {color: purple; font-family: serif;}
+
+.btn.btn-outline-success {background-color: #132f3b; color: white;}
+body {background-image: linear-gradient(white, white ,rgb(146,200,205));}
+#maindiv {width: 60%; margin-top: 5rem;}
+.h1 {color: #203850; font-family: "phudo";}
+h3 {color: #366492; font-family: "courgette";}
+p {color: purple; font-family: serif;}
+
+#container-fluid-2 {animation: none; justify-content: center; background-color: rgb(146, 200, 205); display: flex; margin: auto; flex-wrap: wrap;}
+#cf {color: white;  width: 20rem; margin: 1rem; border-right: 2px white; justify-content: center; padding: 1rem; text-align: center;}
+.icons {margin-bottom: 0.5rem;}
+.h2foot {text-align: center; color:#356391;}
+.h {text-align: center; background-color: rgb(146, 200, 205);padding: 1rem;}
+hr {color: rgb(146, 200, 205); margin: 0;}
