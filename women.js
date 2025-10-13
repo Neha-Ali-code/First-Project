@@ -1,8 +1,8 @@
-let menproducts = document.querySelector('#men-products');
-console.log(menproducts);
+let womenproducts = document.querySelector('#women-products');
+console.log(womenproducts);
 
 function showSkeletons(count = 9) {
-  menproducts.innerHTML = ""; 
+  womenproducts.innerHTML = ""; 
   for (let i = 0; i < count; i++) {
     const skeleton = document.createElement("div");
     skeleton.classList.add("skeleton-card");
@@ -11,7 +11,7 @@ function showSkeletons(count = 9) {
       <div class="skeleton skeleton-text"></div>
       <div class="skeleton skeleton-price"></div>
     `;
-    menproducts.appendChild(skeleton);
+    womenproducts.appendChild(skeleton);
   }
 }
 
@@ -34,7 +34,7 @@ const APIcall = async () => {
     }
 
     console.log("Fashion Collection:", allproducts);
-    menproducts.innerHTML = "";
+    womenproducts.innerHTML = "";
 
     allproducts.forEach((product) => {
       let product_card = document.createElement('div');
@@ -53,12 +53,12 @@ const APIcall = async () => {
         window.location.href = "productDetail.html";
       });
 
-      menproducts.appendChild(product_card);
+      womenproducts.appendChild(product_card);
     });
   } catch (error) {
     let errorMessage = document.createElement('h1');
     errorMessage.innerText = "404 — Products Not Found";
-    menproducts.appendChild(errorMessage);
+    womenproducts.appendChild(errorMessage);
     console.error(error);
   }
 };

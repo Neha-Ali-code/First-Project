@@ -47,20 +47,6 @@ box-sizing: border-box;}
 .heading1 { text-align: center; font-family: "phudo"; color: #203850;}
 .heading2 {font-family: "phudo"; margin-left: 2rem; color: purple;}
 
-#menshirts {display: flex; flex-wrap: wrap;  font-family: "phudo"; justify-content: center;}
-.shirt-card { border: 1rem solid rgb(146, 200, 205); height: 30rem; margin: 1rem; padding-left: 1rem; width: 30%; }
-.product-img {width: 100%; object-fit: cover; height: 70%;}
-.btn {background-color: #315578; color: #fff; margin-bottom: 0.5rem;}
-.shirt-card:hover {transform: translate(1rem,1rem); border-color: #315578 ;}
-.btn:hover {background-color: rgb(146, 200, 205); color: #315578; transition: 0.3s ease-in-out; transform: translate(1.5rem);}
-
-
-h2 {font-size: 1.5rem;}
-.price {margin-bottom: 0.3rem;}
-
-#menshoes {display: flex; flex-wrap: wrap;  font-family: "phudo"; justify-content: center;}
-.shoes-card  { border: 1rem solid rgb(146, 200, 205); height: 30rem; margin: 1rem; padding-left: 1rem; width: 30%;}
-.shoes-card:hover {transform: scale(1.1 , 1.1); transition: ease-in-out (0.5s); border-color: #315578;}
 
 #container-fluid-2 {animation: none; justify-content: center; background-color: rgb(146, 200, 205); display: flex; margin: auto; flex-wrap: wrap;}
 #cf {color: white;  width: 20rem; margin: 1rem; border-right: 2px white; justify-content: center; padding: 1rem; text-align: center;}
@@ -69,25 +55,75 @@ h2 {font-size: 1.5rem;}
 .h {text-align: center; background-color: white; margin: 0;}
 hr {color: rgb(146, 200, 205);}
 
+#women-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
+  justify-content: center;
+  font-family: "phudo";
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.product-card {
+  border: 0.5rem solid rgb(146, 200, 205);
+  margin: 0;
+  padding: 0.6rem;
+  box-shadow: 2px 2px 5px black;
+  min-height: 25rem;
+  border-radius: 0.8rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.product-img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  background-color: #f0f0f0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.btn {
+  background-color: #315578;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+.product-card:hover {
+  transform: translate(0.5rem, 0.5rem);
+  border-color: #315578;
+}
+.btn:hover {
+  background-color: rgb(146, 200, 205);
+  color: #315578;
+  transition: 0.3s ease-in-out;
+  transform: translate(0.3rem);
+}
+
+button > a {
+  color: white;
+  text-decoration: none;
+}
+button > a:hover {
+  color: purple;
+}
 
 
-
-
-#men-products {display: flex; flex-wrap: wrap;  font-family: "phudo"; justify-content: center;}
-.product-card { border: 1rem solid rgb(146, 200, 205); height: auto; margin: 1rem; padding: 0.6rem;
-   box-shadow: 2px 2px 5px black;}
-.product-img {width: 100%; object-fit: cover; height: 70%;}
-.btn {background-color: #315578; margin-bottom: 0.5rem;}
-.product-card:hover {transform: translate(1rem,1rem); border-color: #315578 ;}
-.btn:hover {background-color: rgb(146, 200, 205); color: #315578; transition: 0.3s ease-in-out; transform: translate(1.5rem);}
- button > a {color: white; text-decoration: none;} 
-button > a:hover {color: purple;}
-
-
-.product-card {animation: slide-in linear forwards;animation-timeline: view(); animation-range: entry 10% cover 30%; }
-@keyframes slide-in { from { transform: translateX(50%); opacity: 0;} to {transform: translateX(0); opacity: ;}}
-
-h2 {font-size: 1.3rem; }
+.skeleton-card {
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 1rem;
+  min-height: 25rem;
+  border-radius: 0.8rem;
+}
 
 
 .skeleton {
@@ -95,8 +131,6 @@ h2 {font-size: 1.3rem; }
   background-size: 200% 100%;
   animation: loading 1.5s infinite;
 }
-
-
 @keyframes loading {
   0% {
     background-position: 200% 0;
@@ -106,32 +140,16 @@ h2 {font-size: 1.3rem; }
   }
 }
 
-
-
-.skeleton-card { width: 25%;
-overflow: hidden;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-  padding: 1rem;
-  margin: 1rem;
+.skeleton-img {
+  width: 100%;
+  height: 70%;
+  border-radius: 0.5rem;
 }
-@media (max-width: 1400px) {
-  .skeleton-card
- {
-    width: 30%; margin: 1rem;
-  }
+.skeleton-text {
+  width: 80%;
+  height: 1rem;
 }
-@media (max-width: 990px) {
-  .skeleton-card
- {
-    width: 50%; margin: 1rem;
-  }
+.skeleton-price {
+  width: 50%;
+  height: 0.8rem;
 }
-
-.skeleton-img { width: 100%;height: 20rem;}
-.skeleton-text {width: 80%;height: 1rem;}
-.skeleton-price {width: 50%; height: 0.8rem}
-.skeleton-button {width: 20%;}
