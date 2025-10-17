@@ -85,7 +85,7 @@ button > a:hover {color: purple;}
 
 
 .product-card {animation: slide-in linear forwards;animation-timeline: view(); animation-range: entry 10% cover 30%; }
-@keyframes slide-in { from { transform: translateX(50%); opacity: 0;} to {transform: translateX(0); opacity: ;}}
+@keyframes slide-in { from { transform: translateX(50%); opacity: 0;} to {transform: translateX(0); opacity: 1 ;}}
 
 h2 {font-size: 1.3rem; }
 
