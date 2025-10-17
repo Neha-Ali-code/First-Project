@@ -49,8 +49,8 @@ const APIcall = async () => {
 
       const button = product_card.querySelector(".btn");
       button.addEventListener("click", () => {
-        localStorage.setItem("men-product-detail", JSON.stringify(product));
-        window.location.href = "productDetail.html";
+       localStorage.setItem("product-detail", JSON.stringify(product));
+        window.location.href = `productDetail.html?id=${product.id}`;
       });
 
       womenproducts.appendChild(product_card);

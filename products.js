@@ -36,7 +36,7 @@ const APIcall = async () => {
     }
 
     console.log("🧥 Fashion Collection:", allClothing);
-   PD.innerHTML = "";
+   PD.innerHTML = ""
     
     allClothing.forEach((product) => {
       let product_card = document.createElement('div');
@@ -46,13 +46,15 @@ const APIcall = async () => {
         <img class="product-img" src="${product.thumbnail}" alt="${product.title}">
         <h2>${product.title}</h2>
         <p class="price">$${product.price}</p>
-        <button class="btn"><a href="productDetail.html"class="btn.a">Check Detail</a></button>
+        <button class="btn">Check Details</button>
       `;
 
       const button = product_card.querySelector(".btn")
 button.addEventListener ("click", ()=> {
-localStorage.setItem ("product-detail");
-  window.location.href= "productDetail.html";
+   localStorage.setItem("product-detail", JSON.stringify(product));
+   setTimeout(() => {
+    window.location.href = `productDetail.html?id=${product.id}`;
+  }, 100);
 });
 
       PD.appendChild(product_card);
