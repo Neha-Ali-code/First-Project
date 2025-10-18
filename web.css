@@ -74,7 +74,9 @@ span {color: purple;}
   #grid1 { grid-template-columns: 35% 35%;}}
 
 @media only screen and (max-width: 790px) {
-  #grid1 {grid-template-columns: 100%; padding-left: 15%; padding-right: 15%;}}
+  #grid1 {grid-template-columns: 100%; padding-left: 15%; padding-right: 15%;}
+.grid1child { border: clamp(0.3rem, 4vw, 0.8rem) solid rgb(146, 200, 205)}}
+
 
 
 
@@ -89,8 +91,10 @@ video {width: 100%;}
  transform: translate(-50%, -50%); color: white;text-align: center;   font-size: clamp(0.9rem, 2.5vw, 2rem);}
 
 
-#mainH2 {background-color: rgb(146, 200, 205); margin: 0;color: #203850; 
+#mainH2 {background-color: rgb(146, 200, 205); margin: 0;color: #203850;
 height: 5rem;  font-family:"Phudo"; text-align: center; text-decoration: underline; align-content: center;}
+
+
 
 #grid2 {display: grid; grid-template-columns: 1fr 1fr 1fr 2fr; justify-content: center ;padding: 0; align-content: center; 
 column-gap: 1rem; background-image: linear-gradient(rgb(146, 200, 205), white);}
@@ -150,7 +154,7 @@ h5 {color: #356391; font-family: "phudo" }
 
 
  #post1 {padding: 0;width: 100%;max-width: 100%;opacity: 0;animation: slideIn linear forwards;animation-timeline: view();
-  animation-range: entry 10% cover 40%;}
+  animation-range: entry 10% cover 50%;}
 
 @keyframes slideIn {
   from {
@@ -196,7 +200,7 @@ h5 {color: #356391; font-family: "phudo" }
 #testimonialimg {display: flex; width: 80%; justify-content: center; flex-wrap: wrap; margin-top: 3rem; margin-bottom: 3rem;}
 .child { height: auto; width: 15%; transition: ease-in-out (1s);}
 .childimg { width: 100%; object-fit: cover;}
-  .child:hover {transform: scale(2); border: 0.5rem solid rgb(255, 255, 255); box-shadow: 2px 2px 5px black; }
+  .child:hover {transform: scale(3); border: clamp(0.1rem, 4vw, 0.1rem) solid whitesmoke; box-shadow: 2px 2px 5px black; }
 .child img:hover {width: 100%;}
 @media (max-width: 480px) {
     #testimonialimg {
